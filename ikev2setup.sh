@@ -5,10 +5,7 @@
 # The latest version of this script is available at:
 # https://github.com/hwdsl2/setup-ipsec-vpn
 #
-# Copyright (C) 2020-2021 Lin Song <linsongui@gmail.com>
-#
-# This work is licensed under the Creative Commons Attribution-ShareAlike 3.0
-# Unported License: http://creativecommons.org/licenses/by-sa/3.0/
+# Copyright (C) 2021 Kar3nGr1g
 #
 # Attribution required: please include my name in any derivative and let me
 # know how you have improved it!
@@ -528,9 +525,9 @@ enter_custom_dns() {
       ;;
     *)
       use_custom_dns=0
-      dns_server_1=8.8.8.8
-      dns_server_2=8.8.4.4
-      dns_servers="8.8.8.8 8.8.4.4"
+      dns_server_1=9.9.9.9
+      dns_server_2=1.1.1.1
+      dns_servers="9.9.9.9 1.1.1.1"
       ;;
   esac
 
@@ -553,7 +550,7 @@ enter_custom_dns() {
       dns_servers="$dns_server_1"
     fi
   else
-    echo "Using Google Public DNS (8.8.8.8, 8.8.4.4)."
+    echo "Using Quad9 and Cloudflare Public DNS's (9.9.9.9, 1.1.1.1)."
   fi
   echo
 }
@@ -1193,8 +1190,7 @@ EOF
 
 cat <<'EOF'
 
-Next steps: Configure IKEv2 VPN clients. See:
-https://git.io/ikev2clients
+Next steps: Configure IKEv2 VPN clients.
 
 ================================================
 
@@ -1474,9 +1470,9 @@ ikev2setup() {
       dns_server_2=""
       dns_servers="$VPN_DNS_SRV1"
     else
-      dns_server_1=8.8.8.8
-      dns_server_2=8.8.4.4
-      dns_servers="8.8.8.8 8.8.4.4"
+      dns_server_1=9.9.9.9
+      dns_server_2=1.1.1.1
+      dns_servers="9.9.9.9 1.1.1.1"
     fi
     check_mobike_support
     mobike_enable="$mobike_support"
