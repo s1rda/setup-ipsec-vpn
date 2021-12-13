@@ -3,9 +3,9 @@
 # Script to set up IKEv2 on Ubuntu, Debian, CentOS/RHEL and Amazon Linux 2
 #
 # The latest version of this script is available at:
-# https://github.com/hwdsl2/setup-ipsec-vpn
+# https://github.com/s1rda/setup-ipsec-vpn
 #
-# Copyright (C) 2021 Kar3nGr1g
+# Copyright (C) 2021 S1rda
 #
 # Attribution required: please include my name in any derivative and let me
 # know how you have improved it!
